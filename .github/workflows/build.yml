@@ -1,0 +1,35 @@
+name: Build OneVsFive Plugin
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Download CounterStrikeSharp API v1.0.363
+        run: |
+          mkdir -p lib
+          curl -L "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.363/counterstrikesharp-build-363-linux-x64.zip" -o css.zip
+          unzip css.zip -d css_extracted
+          cp css_extracted/api/CounterStrikeSharp.API.dll lib/
+
+      - name: Build plugin
+        run: dotnet build -c Release
+
+      - name: Upload DLL artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OneVsFive-Plugin
+          path: bin/Release/net8.0/OneVsFive.dll
