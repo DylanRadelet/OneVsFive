@@ -21,7 +21,7 @@ jobs:
       - name: Download CounterStrikeSharp API v1.0.363
         run: |
           mkdir -p lib
-          curl -L "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.363/counterstrikesharp-build-363-linux-x64.zip" -o css.zip
+          curl -L "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.363/counterstrikesharp-with-runtime-build-363-linux-x64.zip" -o css.zip
           unzip css.zip -d css_extracted
           cp css_extracted/api/CounterStrikeSharp.API.dll lib/
 
