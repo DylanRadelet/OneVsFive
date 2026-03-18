@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>OneVsFive</AssemblyName>
+    <RootNamespace>OneVsFive</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <!--
+      Télécharge CounterStrikeSharp.API.dll depuis :
+      https://github.com/roflmuffin/CounterStrikeSharp/releases/tag/v1.0.363
+      (fichier counterstrikesharp-build-363-linux-...zip → dossier api/)
+      Place CounterStrikeSharp.API.dll dans le dossier lib/ à côté de ce .csproj
+    -->
+    <Reference Include="CounterStrikeSharp.API">
+      <HintPath>lib\CounterStrikeSharp.API.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
