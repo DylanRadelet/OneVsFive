@@ -9,12 +9,6 @@
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CounterStrikeSharp.API">
-      <HintPath>lib/CounterStrikeSharp.API.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="CounterStrikeSharp.API" Version="1.0.363" />
   </ItemGroup>
 </Project>
