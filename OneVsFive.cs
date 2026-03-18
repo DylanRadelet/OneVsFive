@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using CounterStrikeSharp.API;
+﻿using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Core.Attributes.Registration;
 using CounterStrikeSharp.API.Modules.Admin;
@@ -405,7 +404,7 @@ public class OneVsFivePlugin : BasePlugin
                 var pawn = ct.PlayerPawn.Value;
                 if (pawn == null || !ct.PawnIsAlive) continue;
 
-                pawn.Glow.GlowColorOverride = Color.FromArgb(255, 255, 50, 50); // Rouge vif
+                pawn.Glow.GlowColorOverride = System.Drawing.Color.FromArgb(255, 255, 50, 50); // Rouge vif
                 pawn.Glow.GlowType          = 3;      // 3 = visible through walls
                 pawn.Glow.GlowRange         = 9999;
                 pawn.Glow.GlowRangeMin      = 0;
