@@ -11,7 +11,7 @@ namespace OneVsFive;
 public class OneVsFivePlugin : BasePlugin
 {
     public override string ModuleName    => "1v5 Mode";
-    public override string ModuleVersion => "1.2.0";
+    public override string ModuleVersion => "1.0.0";
     public override string ModuleAuthor  => "toi";
 
     // ────────────────────────────────────────────────────────────────
@@ -404,7 +404,7 @@ public class OneVsFivePlugin : BasePlugin
                 var pawn = ct.PlayerPawn.Value;
                 if (pawn == null || !ct.PawnIsAlive) continue;
 
-                pawn.Glow.GlowColorOverride = System.Drawing.Color.FromArgb(255, 255, 50, 50); // Rouge vif
+                pawn.Glow.GlowColorOverride = Color.Red;                    
                 pawn.Glow.GlowType          = 3;      // 3 = visible through walls
                 pawn.Glow.GlowRange         = 9999;
                 pawn.Glow.GlowRangeMin      = 0;
